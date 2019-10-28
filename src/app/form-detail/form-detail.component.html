@@ -17,7 +17,10 @@
           <label for="author"><strong>Author:</strong></label>
           <input type="text" name="author" class="form-control" id="exampleFormControlInput1"  [(ngModel)]="quoteAuthor" placeholder="Add Authors name here" required>
       </div>
-  
+      <div class="form-group">
+          <label for="submitDate"><b>Date of post:</b></label>          
+          <p>{{newQuote.submitDate|date}}</p>
+      </div>
       <button type="submit" class="btn btn-primary">Post Quote</button>
     </form>
   </div>
