@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { FormDetailComponent } from './form-detail/form-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    FormDetailComponent
   ],
   imports: [
     BrowserModule,
