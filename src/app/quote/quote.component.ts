@@ -31,7 +31,7 @@ return(b.upVote) as any - (a.downVote) as any;
   }
 
   toggleDetails() {
-    this.showDetails = !this.showDetails;//show or hide content
+    this.showDetails = !this.showDetails;
     
   }
 
@@ -41,7 +41,7 @@ return(b.upVote) as any - (a.downVote) as any;
       let toDelete = confirm(`Are you sure you want to delete this Quote?`)
 
       if (toDelete){
-        this.quotes.splice(index,1)//removes quote
+        this.quotes.splice(index,1)
     }
   }
 }
