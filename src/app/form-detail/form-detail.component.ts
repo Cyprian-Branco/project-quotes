@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Quotes } from '../quotes'
-import { FormGroup, FormBuilder, Validators } from '@angular/forms'
-import { Quote } from '@angular/compiler/src/expression_parser/ast';
+import { Quote } from '../quotes'
+
 @Component({
   selector: 'app-form-detail',
   templateUrl: './form-detail.component.html',
@@ -9,16 +8,16 @@ import { Quote } from '@angular/compiler/src/expression_parser/ast';
 })
 export class FormDetailComponent implements OnInit {
 
-@Output() postQuote = new EventEmitter()
-quotePublisher:string
-quoteTxt:string
-quoteAuthor:string
-createdQuote:any
 
-submitQuote(){
-  this.createdQuote = new Quotes(this.quotePublisher,this.quoteTxt, this.quoteAuthor)
-  
-}
+  newQuote = new Quote(0, "", "", "", new Date());
+
+  @Output() addQuote = new EventEmitter<Quote>();
+
+  submitQuote() {
+    this.addQuote.emit(this.newQuote);//this triggers addition of the new quote
+  }
+
+
   constructor() { }
 
   ngOnInit() {
