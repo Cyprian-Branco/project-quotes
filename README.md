@@ -8,7 +8,7 @@ This is a simple webpage that allows anyone to publish a fmous quote
 
 ## Author
 
-Cyrpain Bowen email:bowencyprian@outlook.com
+Cyprian Bowen email:bowencyprian@outlook.com
 
 ## SetUp Instructions
 
