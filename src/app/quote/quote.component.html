@@ -1,0 +1,59 @@
+<div class="container-fluid" style="background:darkcyan">
+  <div class="jumbotron" >
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h1>Legendary Quotes</h1>
+      </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto" style="text-align: center;">
+        <div>
+            <h3>Publish A Quote Here:</h3>
+        </div>
+        <hr> 
+  
+      <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+      </div>
+    </div>
+</div>
+<hr>
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h3>Published Quotes:</h3>
+  
+        <div class="row"> 
+            <div class="card" id="crd" *ngFor='let quote of quotes;let i = index'> 
+                 <div class="card-title">
+                  <h5 font color="black" *ngIf="showDetails">{{quote.name}}</h5>
+                </div> 
+                
+                <button type="button" (click)="toggleDetails(i)"  class="btn btn-success" style="color:black;">{{showDetails? "Hide": "Show"}}Details</button> 
+                 <div class="card-body" id="ppp">
+                  <p id="{{i}}" appHighlight>{{quote.details}}</p>
+                </div>
+                <div class="card-footer" id="hut" *ngIf='showDetails'> 
+                  <div class="row">
+                    <div class="col-4">
+                      <p><app-vote></app-vote></p> 
+                     </div>
+                    <div class="col-6" id="small">
+                      <p>Submitted by {{quote.submitter}}, {{quote.completeDate|dateCount}} days ago</p> 
+                    </div>
+                    <div class="col-2"> 
+
+                      <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+                    
+                   </div>
+                  </div> 
+      
+               </div>
+            </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
