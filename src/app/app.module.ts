@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
-import { VoteComponent } from './vote/vote.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
@@ -16,7 +15,6 @@ import { HighlightDirective } from './highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    VoteComponent,
     QuoteComponent,
     QuoteFormComponent,
     QuoteDetailComponent,
