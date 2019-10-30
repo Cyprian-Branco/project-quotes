@@ -23,12 +23,6 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-  get sortQuotes() {
-    return this.quotes.sort((a,b) =>{
-return(b.upVote) as any - (a.downVote) as any;
-    });
-  }
-
   toggleDetails() {
     this.showDetails = !this.showDetails;
     
